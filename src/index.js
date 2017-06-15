@@ -20,6 +20,7 @@ export default models => {
 
     return {
       name: Child.name ? `wired-${Child.name}` : 'wired',
+      props: Child.props,
       data() {
         return {
           wiredState: {

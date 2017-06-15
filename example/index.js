@@ -3,8 +3,8 @@ import wired from '../src'
 
 const App = {
   name: 'app',
+  props: ['random'],
   render() {
-    console.log(this.pending)
     return (
       <div id="app">
         <p>
@@ -28,10 +28,10 @@ const WiredApp = wired({
   good: new Promise(resolve =>
     setTimeout(() => resolve({ name: 'EGOIST' }), 1000)
   ),
-  bad: Promise.reject(new Error(`No name, cuz I'm bad`))
+  bad: props => Promise.reject(new Error(`No name, cuz I'm ${props.random}`))
 })(App)
 
 new Vue({
   el: '#app',
-  render: h => h(WiredApp)
+  render: h => h(WiredApp, { props: { random: 'randomly bad' } })
 })
