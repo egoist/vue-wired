@@ -48,7 +48,7 @@ import wired from 'vue-wired'
 
 export default wired({
   user: () => Promise.resolve({ name: 'EGOIST' })
-})
+})({ /* Component */ })
 </script>
 ```
 
