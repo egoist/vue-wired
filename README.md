@@ -52,7 +52,7 @@ export default wired({
 </script>
 ```
 
-<img src="https://raw.githubusercontent.com/egoist/vue-wired/master/media/wired.svg" width="500" alt="gram" />
+<img src="https://cdn.rawgit.com/egoist/vue-wired/master/media/wired.svg" width="500" alt="gram" />
 
 ## Contributing
 
