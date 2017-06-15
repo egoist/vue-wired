@@ -1,0 +1,61 @@
+{
+  "name": "vue-wired",
+  "version": "0.0.0",
+  "description": "A Higher Order Component to pass async values down as props.",
+  "repository": {
+    "url": "egoist/vue-wired",
+    "type": "git"
+  },
+  "main": "dist/vue-wired.common.js",
+  "unpkg": "dist/vue-wired.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "jest && npm run lint",
+    "prepublish": "npm run build",
+    "lint": "xo",
+    "build": "bili --format cjs,umd --compress --buble.objectAssign assign --banner",
+    "example": "poi"
+  },
+  "author": "egoist <0x142857@gmail.com>",
+  "license": "MIT",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "babel": {
+    "presets": [
+      [
+        "vue-app",
+        {
+          "useBuiltIns": true
+        }
+      ]
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-preset-env": "^1.4.0",
+    "bili": "^0.16.0-rc.2",
+    "eslint-config-rem": "^3.0.0",
+    "jest-cli": "^20.0.4",
+    "poi": "^9.0.2",
+    "xo": "^0.18.0"
+  },
+  "poi": {
+    "dist": "example/dist",
+    "entry": "example/index.js"
+  },
+  "xo": {
+    "extends": "rem/prettier",
+    "envs": [
+      "jest"
+    ],
+    "rules": {
+      "import/prefer-default-export": 0
+    },
+    "ignores": [
+      "example/**"
+    ]
+  }
+}
