@@ -2,6 +2,8 @@
 
 [![NPM version](https://img.shields.io/npm/v/vue-wired.svg?style=flat)](https://npmjs.com/package/vue-wired) [![NPM downloads](https://img.shields.io/npm/dm/vue-wired.svg?style=flat)](https://npmjs.com/package/vue-wired) [![CircleCI](https://circleci.com/gh/egoist/vue-wired/tree/master.svg?style=shield)](https://circleci.com/gh/egoist/vue-wired/tree/master)  [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat)](https://github.com/egoist/donate)
 
+Inspired by [wiretie](https://github.com/synacor/wiretie).
+
 ## Install
 
 ```bash
