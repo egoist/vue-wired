@@ -1,6 +1,6 @@
 {
   "name": "vue-wired",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A Higher Order Component to pass async values down as props.",
   "repository": {
     "url": "egoist/vue-wired",
