@@ -25,9 +25,10 @@ const App = {
 }
 
 const WiredApp = wired({
-  good: () =>
-    new Promise(resolve => setTimeout(() => resolve({ name: 'EGOIST' }), 1000)),
-  bad: () => Promise.reject(new Error(`No name, cuz I'm bad`))
+  good: new Promise(resolve =>
+    setTimeout(() => resolve({ name: 'EGOIST' }), 1000)
+  ),
+  bad: Promise.reject(new Error(`No name, cuz I'm bad`))
 })(App)
 
 new Vue({

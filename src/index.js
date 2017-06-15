@@ -32,9 +32,12 @@ export default models => {
       created() {
         for (const modelName of modelNames) {
           this.$set(this.wiredState.pending, modelName, true)
-          const model = models[modelName]
+          let model = models[modelName]
+          if (typeof model === 'function') {
+            model = model(this.$props)
+          }
           model &&
-            model()
+            model
               .then(value => {
                 this.$set(this.wiredState, modelName, value)
                 this.$set(this.wiredState.pending, modelName, false)
