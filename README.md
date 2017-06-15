@@ -47,7 +47,9 @@ You write:
 import wired from 'vue-wired'
 
 export default wired({
-  user: () => Promise.resolve({ name: 'EGOIST' })
+  user: Promise.resolve({ name: 'EGOIST' }),
+  // Use a function if you want to access props
+  // user: props => Promise.resolve({ name: 'EGOIST' })
 })({ /* Component */ })
 </script>
 ```
