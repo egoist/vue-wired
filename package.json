@@ -15,7 +15,7 @@
     "test": "jest && npm run lint",
     "prepublish": "npm run build",
     "lint": "xo",
-    "build": "bili --format cjs,umd --compress --buble.objectAssign assign --banner",
+    "build": "bili --module-name wired --format cjs,umd --compress --buble.objectAssign assign --banner",
     "example": "poi"
   },
   "author": "egoist <0x142857@gmail.com>",
