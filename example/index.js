@@ -28,7 +28,7 @@ const WiredApp = wired({
   good: new Promise(resolve =>
     setTimeout(() => resolve({ name: 'EGOIST' }), 1000)
   ),
-  bad: props => Promise.reject(new Error(`No name, cuz I'm ${props.random}`))
+  bad: vm => Promise.reject(new Error(`No name, cuz I'm ${vm.random}`))
 })(App)
 
 new Vue({

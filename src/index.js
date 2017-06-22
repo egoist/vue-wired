@@ -35,7 +35,7 @@ export default models => {
           this.$set(this.wiredState.pending, modelName, true)
           let model = models[modelName]
           if (typeof model === 'function') {
-            model = model(this.$props)
+            model = model.call(this, this)
           }
           model &&
             model

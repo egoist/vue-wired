@@ -50,8 +50,9 @@ import wired from 'vue-wired'
 
 export default wired({
   user: Promise.resolve({ name: 'EGOIST' }),
-  // Use a function if you want to access props
-  // user: props => Promise.resolve({ name: 'EGOIST' })
+  // Use a function if you want to access component instance
+  // via `this` or `vm` in arrow function
+  // user: vm => Promise.resolve({ name: 'EGOIST' })
 })({ /* Component */ })
 </script>
 ```
