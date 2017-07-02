@@ -40,22 +40,29 @@ export default {
 
 You write:
 
+**User.vue**:
+
 ```vue
 <template>
   <div>{{ pending.user ? 'Loading...' : user.name }}</div>
 </template>
+```
 
-<script>
+**WiredUser.js**:
+
+```js
 import wired from 'vue-wired'
+import User from './User.vue'
 
 export default wired({
   user: Promise.resolve({ name: 'EGOIST' }),
   // Use a function if you want to access component instance
   // via `this` or `vm` in arrow function
   // user: vm => Promise.resolve({ name: 'EGOIST' })
-})({ /* Component */ })
-</script>
+})(User)
 ```
+
+Now async API logic is extracted from your `User` component.
 
 <img src="https://rawgit.com/egoist/vue-wired/master/media/wired.svg" width="500" alt="gram" />
 
