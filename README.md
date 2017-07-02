@@ -62,7 +62,7 @@ export default wired({
 })(User)
 ```
 
-Now async API logic is extracted from your `User` component.
+Now async API logic is extracted from your `User` component. You can write these two components in one file if you use `render` function instead of `template`.
 
 <img src="https://rawgit.com/egoist/vue-wired/master/media/wired.svg" width="500" alt="gram" />
 
