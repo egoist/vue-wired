@@ -10,7 +10,7 @@ const App = {
         <p>
           {this.pending.good
             ? <strong>Loading good boy...</strong>
-            : <h1 style="color:green">Good boy's name: {this.good.name}</h1>}
+            : <h1 style="color:green">Good boy\'s name: {this.good.name}</h1>}
         </p>
         <p>
           {this.pending.bad
